@@ -35,6 +35,14 @@ Each run writes into `outputs/<run_id>/`:
 - `summary.json`
 - `config.json`
 
+## Bridge to qlib workflows
+
+A qlib model workflow can consume `members.parquet` through the custom inst processor:
+
+- `qlib.data.inst_processor.MicrocapUniverseInstProcessor`
+
+That processor filters each instrument's rows to dates where the instrument is selected in the precomputed strict microcap membership file.
+
 ## Rule notes
 
 ### ST / *ST
