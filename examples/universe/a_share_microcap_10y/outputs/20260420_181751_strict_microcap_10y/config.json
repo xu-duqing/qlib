@@ -1,0 +1,13 @@
+{
+  "start_date": "20250101",
+  "end_date": "20250417",
+  "lookback_years": 10,
+  "bottom_n": 400,
+  "mv_field": "total_mv",
+  "rules": [
+    "exclude ST and *ST by active historical name",
+    "exclude delisting-arrangement-like names by active historical name",
+    "exclude listing first day",
+    "exclude IPO consecutive unopened upper-limit phase via limit_list_d open_times == 0"
+  ]
+}
