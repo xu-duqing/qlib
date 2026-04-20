@@ -32,7 +32,15 @@ Qlib's default examples often target broader institutional-style universes such 
 ```bash
 python qlib/cli/run.py examples/benchmarks/Linear/workflow_config_linear_Alpha158_csi1000.yaml
 python qlib/cli/run.py examples/benchmarks/Linear/workflow_config_linear_Alpha158_csi1000_recent5y.yaml
+python qlib/cli/run.py examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158_csi1000_recent5y.yaml
 ```
+
+## Recent 5-year comparison target
+
+For direct comparison on the same `csi1000` small-cap-oriented universe and the same recent 5-year split:
+
+- Linear: `examples/benchmarks/Linear/workflow_config_linear_Alpha158_csi1000_recent5y.yaml`
+- LightGBM: `examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158_csi1000_recent5y.yaml`
 
 ## Note
 
