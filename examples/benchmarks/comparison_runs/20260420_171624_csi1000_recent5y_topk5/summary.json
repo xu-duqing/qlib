@@ -1,0 +1,36 @@
+{
+  "run_id": "20260420_171624_csi1000_recent5y_topk5",
+  "generated_at": "2026-04-20T17:22:11",
+  "results": [
+    {
+      "name": "linear",
+      "config": "examples/benchmarks/Linear/workflow_config_linear_Alpha158_csi1000_recent5y_topk5.yaml",
+      "exit_code": 0,
+      "log": "examples/benchmarks/comparison_runs/20260420_171624_csi1000_recent5y_topk5/linear_stdout.log",
+      "metrics": {
+        "IC": "0.00813561206637587",
+        "ICIR": "0.05103456851357552",
+        "Rank IC": "0.055099528718901766",
+        "Rank ICIR": "0.30387853311865815",
+        "annualized_return": "-0.020000",
+        "information_ratio": "-0.103538",
+        "max_drawdown": "-0.245820"
+      }
+    },
+    {
+      "name": "lightgbm",
+      "config": "examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158_csi1000_recent5y_topk5.yaml",
+      "exit_code": 0,
+      "log": "examples/benchmarks/comparison_runs/20260420_171624_csi1000_recent5y_topk5/lightgbm_stdout.log",
+      "metrics": {
+        "IC": "0.01856549811596614",
+        "ICIR": "0.17957283642713237",
+        "Rank IC": "0.03066605204457275",
+        "Rank ICIR": "0.34547233117093445",
+        "annualized_return": "-0.056409",
+        "information_ratio": "-0.294429",
+        "max_drawdown": "-0.303162"
+      }
+    }
+  ]
+}
