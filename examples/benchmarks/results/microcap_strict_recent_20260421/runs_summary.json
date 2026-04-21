@@ -1,0 +1,96 @@
+{
+  "exported_at": "2026-04-21",
+  "source_mlruns_root": "qlib-felix/mlruns",
+  "experiment_id": "326446173096931478",
+  "microcap_strict_recent": {
+    "linear_runs": [
+      {
+        "run_id": "05f867cae0d24e399ff86008ce94ecbf",
+        "command": "qlib/cli/run.py examples/benchmarks/Linear/workflow_config_linear_Alpha158_microcap_strict_recent.yaml",
+        "artifact_files": [
+          "code_diff.txt",
+          "code_cached.txt",
+          "task",
+          "code_status.txt"
+        ],
+        "metrics_present": false,
+        "portfolio_artifacts_present": false,
+        "signal_artifacts_present": false,
+        "note": "Only code snapshot artifacts present; no benchmark metrics were recorded in this MLflow run."
+      },
+      {
+        "run_id": "923acc7cdde743808c16eacb2afdc0bd",
+        "command": "qlib/cli/run.py examples/benchmarks/Linear/workflow_config_linear_Alpha158_microcap_strict_recent.yaml",
+        "artifact_files": [
+          "code_diff.txt",
+          "code_cached.txt",
+          "task",
+          "code_status.txt"
+        ],
+        "metrics_present": false,
+        "portfolio_artifacts_present": false,
+        "signal_artifacts_present": false,
+        "note": "Only code snapshot artifacts present; no benchmark metrics were recorded in this MLflow run."
+      }
+    ],
+    "lightgbm_runs": [],
+    "summary": {
+      "linear_run_count": 2,
+      "lightgbm_run_count": 0,
+      "completed_metric_runs": 0,
+      "conclusion": "No completed microcap_strict_recent benchmark result with usable metrics/artifacts exists in current local MLflow records."
+    }
+  },
+  "reference_completed_runs_same_experiment": [
+    {
+      "run_id": "350f036dd6b24c9bb74acf797d98055e",
+      "model": "Linear",
+      "config": "examples/benchmarks/Linear/workflow_config_linear_Alpha158_csi1000.yaml",
+      "IC": 0.030252544378620728,
+      "ICIR": 0.3458610885928193,
+      "excess_return_without_cost_annualized": 0.11117885943718278,
+      "excess_return_with_cost_annualized": 0.06492953929107874,
+      "artifact_hint": "Contains pred.pkl, portfolio_analysis/*, sig_analysis/*"
+    },
+    {
+      "run_id": "598612866138484685245914a1e5d882",
+      "model": "Linear",
+      "config": "examples/benchmarks/Linear/workflow_config_linear_Alpha158_csi1000_recent5y.yaml",
+      "IC": 0.00813561206637587,
+      "ICIR": 0.05103456851357552,
+      "excess_return_without_cost_annualized": 0.004372544946975478,
+      "excess_return_with_cost_annualized": -0.08873508802061274,
+      "artifact_hint": "Contains pred.pkl, portfolio_analysis/*, sig_analysis/*"
+    },
+    {
+      "run_id": "6f7a6bb8936c4e3082e0c2ffc1b93d26",
+      "model": "Linear",
+      "config": "examples/benchmarks/Linear/workflow_config_linear_Alpha158_csi1000_recent5y_topk5.yaml",
+      "IC": 0.00813561206637587,
+      "ICIR": 0.05103456851357552,
+      "excess_return_without_cost_annualized": 0.07041459645778628,
+      "excess_return_with_cost_annualized": -0.019999996350745043,
+      "artifact_hint": "Contains pred.pkl, portfolio_analysis/*, sig_analysis/*"
+    },
+    {
+      "run_id": "41e9f2955d3f43c8922e4d23758fef3b",
+      "model": "LightGBM",
+      "config": "examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158_csi1000_recent5y.yaml",
+      "IC": 0.01856549811596614,
+      "ICIR": 0.17957283642713237,
+      "excess_return_without_cost_annualized": 0.13605680057207387,
+      "excess_return_with_cost_annualized": 0.044285028862222124,
+      "artifact_hint": "Contains pred.pkl, portfolio_analysis/*, sig_analysis/*"
+    },
+    {
+      "run_id": "f12dd9b441c54246abeabee9305ebef8",
+      "model": "LightGBM",
+      "config": "examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158_csi1000_recent5y_topk5.yaml",
+      "IC": 0.01856549811596614,
+      "ICIR": 0.17957283642713237,
+      "excess_return_without_cost_annualized": 0.0374846213434239,
+      "excess_return_with_cost_annualized": -0.056409215288375586,
+      "artifact_hint": "Contains pred.pkl, portfolio_analysis/*, sig_analysis/*"
+    }
+  ]
+}
