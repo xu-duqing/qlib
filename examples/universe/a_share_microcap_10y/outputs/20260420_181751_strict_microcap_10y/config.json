@@ -5,6 +5,7 @@
   "bottom_n": 400,
   "mv_field": "total_mv",
   "rules": [
+    "exclude .BJ listings (keep only .SH/.SZ)",
     "exclude ST and *ST by active historical name",
     "exclude delisting-arrangement-like names by active historical name",
     "exclude listing first day",

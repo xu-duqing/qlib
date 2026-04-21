@@ -15,7 +15,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent
 OUTPUT_ROOT = ROOT / "outputs"
 TUSHARE_URL = "https://api.tushare.pro"
-A_SHARE_SUFFIX = (".SZ", ".SH", ".BJ")
+A_SHARE_SUFFIX = (".SZ", ".SH")
 EXCLUDED_MARKERS = ("ST", "*ST", "退", "退市")
 
 
@@ -193,6 +193,10 @@ def main() -> None:
     basic_name_map = dict(zip(stock_basic["ts_code"], stock_basic["name"]))
     list_date_map = dict(zip(stock_basic["ts_code"], stock_basic["list_date"]))
 
+    daily_basic = daily_basic[daily_basic["ts_code"].astype(str).str.endswith(A_SHARE_SUFFIX)].copy()
+    daily = daily[daily["ts_code"].astype(str).str.endswith(A_SHARE_SUFFIX)].copy()
+    limit_df = limit_df[limit_df["ts_code"].astype(str).str.endswith(A_SHARE_SUFFIX)].copy()
+
     merged = daily_basic.merge(daily, on=["ts_code", "trade_date"], how="left", suffixes=("_basic", "_daily"))
     merged = merged.merge(stock_basic[["ts_code", "market", "list_date"]], on="ts_code", how="left")
 
@@ -295,6 +299,7 @@ def main() -> None:
                 "bottom_n": args.bottom_n,
                 "mv_field": args.mv_field,
                 "rules": [
+                    "exclude .BJ listings (keep only .SH/.SZ)",
                     "exclude ST and *ST by active historical name",
                     "exclude delisting-arrangement-like names by active historical name",
                     "exclude listing first day",
