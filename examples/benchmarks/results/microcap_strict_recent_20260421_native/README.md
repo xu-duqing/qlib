@@ -2,6 +2,15 @@
 
 This run uses the new strict universe rebuilt without `.BJ`, converted into a qlib-native instruments file instead of relying on `inst_processor` filtering.
 
+## Linear vs LightGBM 简洁对比
+
+| 模型 | Run ID | IC | ICIR | Rank IC | Rank ICIR | 带成本年化超额 | 带成本信息比率 | 带成本最大回撤 |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| Linear | `db368c58ca6f47a3b898e41fc9c848eb` | -0.0137 | -0.1146 | 0.0053 | 0.0400 | 0.1394 | 0.7866 | -0.0531 |
+| LightGBM | `4002be5ec7bd4161834ec6267f44d62b` | 0.0411 | 0.5581 | 0.0353 | 0.4749 | 0.1631 | 0.8574 | -0.0531 |
+
+**一句话结论：** 在这个 native strict microcap market 上，**LightGBM 明显优于 Linear**；信号指标更强，带成本年化超额也更高。
+
 ## Native market file
 
 - source parquet: `examples/universe/a_share_microcap_10y/outputs/20260421_103028_strict_microcap_10y/members.parquet`
