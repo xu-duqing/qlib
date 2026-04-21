@@ -50,7 +50,13 @@ class MicrocapUniverseInstProcessor(InstProcessor):
         members = members[members["selected"].astype(bool)].copy()
         members["trade_date"] = pd.to_datetime(members["trade_date"].astype(str), format="%Y%m%d", errors="coerce")
         members = members.dropna(subset=["trade_date", "ts_code"])
-        self._selected_map = set(zip(members["ts_code"], members["trade_date"]))
+        members["ts_code"] = members["ts_code"].astype(str)
+        members["qlib_code"] = members["ts_code"].str.replace(".SZ", "", regex=False).str.replace(".SH", "", regex=False).str.replace(".BJ", "", regex=False)
+        members["qlib_code"] = members.apply(
+            lambda row: ("SZ" if row["ts_code"].endswith(".SZ") else "SH" if row["ts_code"].endswith(".SH") else "BJ") + row["qlib_code"],
+            axis=1,
+        )
+        self._selected_map = set(zip(members["qlib_code"], members["trade_date"]))
         self._loaded = True
 
     def __call__(self, df: pd.DataFrame, instrument, *args, **kwargs):

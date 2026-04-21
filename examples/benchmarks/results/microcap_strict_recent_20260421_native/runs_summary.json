@@ -1,0 +1,80 @@
+{
+  "linear": {
+    "run_id": "db368c58ca6f47a3b898e41fc9c848eb",
+    "command": "qlib/cli/run.py examples/benchmarks/Linear/workflow_config_linear_Alpha158_microcap_strict_recent.yaml",
+    "artifacts": [
+      "code_cached.txt",
+      "code_diff.txt",
+      "code_status.txt",
+      "config",
+      "dataset",
+      "label.pkl",
+      "params.pkl",
+      "portfolio_analysis/indicator_analysis_1day.pkl",
+      "portfolio_analysis/indicators_normal_1day.pkl",
+      "portfolio_analysis/indicators_normal_1day_obj.pkl",
+      "portfolio_analysis/port_analysis_1day.pkl",
+      "portfolio_analysis/positions_normal_1day.pkl",
+      "portfolio_analysis/report_normal_1day.pkl",
+      "pred.pkl",
+      "sig_analysis/ic.pkl",
+      "sig_analysis/long_avg_r.pkl",
+      "sig_analysis/long_short_r.pkl",
+      "sig_analysis/ric.pkl",
+      "task"
+    ],
+    "metrics": {
+      "IC": -0.013730738793051369,
+      "ICIR": -0.11461565068492639,
+      "Rank IC": 0.005297296299442623,
+      "Rank ICIR": 0.03998646447031803,
+      "Long-Avg Ann Return": -0.13233503699302673,
+      "Long-Avg Ann Sharpe": -0.19438883662223816,
+      "Long-Short Ann Return": -0.01671450398862362,
+      "Long-Short Ann Sharpe": -0.22852911055088043,
+      "1day.excess_return_without_cost.annualized_return": 0.1681217315757017,
+      "1day.excess_return_without_cost.information_ratio": 0.9471320013237767,
+      "1day.excess_return_without_cost.max_drawdown": -0.05312865972518921,
+      "1day.excess_return_with_cost.annualized_return": 0.13943710798142692,
+      "1day.excess_return_with_cost.information_ratio": 0.7865595733454844,
+      "1day.excess_return_with_cost.max_drawdown": -0.05312865972518921
+    }
+  },
+  "lightgbm": {
+    "run_id": "4002be5ec7bd4161834ec6267f44d62b",
+    "command": "qlib/cli/run.py examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158_microcap_strict_recent.yaml",
+    "artifacts": [
+      "code_cached.txt",
+      "code_diff.txt",
+      "code_status.txt",
+      "config",
+      "dataset",
+      "label.pkl",
+      "params.pkl",
+      "portfolio_analysis/indicator_analysis_1day.pkl",
+      "portfolio_analysis/indicators_normal_1day.pkl",
+      "portfolio_analysis/indicators_normal_1day_obj.pkl",
+      "portfolio_analysis/port_analysis_1day.pkl",
+      "portfolio_analysis/positions_normal_1day.pkl",
+      "portfolio_analysis/report_normal_1day.pkl",
+      "pred.pkl",
+      "sig_analysis/ic.pkl",
+      "sig_analysis/ric.pkl",
+      "task"
+    ],
+    "metrics": {
+      "IC": 0.04112736871346318,
+      "ICIR": 0.558096254503645,
+      "Rank IC": 0.03529893048417808,
+      "Rank ICIR": 0.4748826974274604,
+      "1day.excess_return_without_cost.annualized_return": 0.19603461646812434,
+      "1day.excess_return_without_cost.information_ratio": 1.0277989027495134,
+      "1day.excess_return_without_cost.max_drawdown": -0.05312865972518921,
+      "1day.excess_return_with_cost.annualized_return": 0.16309483519608808,
+      "1day.excess_return_with_cost.information_ratio": 0.8574446495397802,
+      "1day.excess_return_with_cost.max_drawdown": -0.05312865972518921,
+      "l2.train": 0.9956236338606967,
+      "l2.valid": 0.9975905954761736
+    }
+  }
+}
