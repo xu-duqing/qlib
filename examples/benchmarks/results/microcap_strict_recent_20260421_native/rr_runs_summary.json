@@ -1,0 +1,27 @@
+{
+  "market": "microcap_strict_recent",
+  "type": "dynamic_rr",
+  "linear": {
+    "cost_annualized_return": 0.804747,
+    "cost_information_ratio": 3.696948,
+    "cost_max_drawdown": -0.053129,
+    "IC": -0.003609183563012218,
+    "ICIR": -0.06452689843606861,
+    "Rank IC": 0.06273299596012825,
+    "Rank ICIR": 0.7748020853843213
+  },
+  "lightgbm": {
+    "cost_annualized_return": 0.815210,
+    "cost_information_ratio": 3.339370,
+    "cost_max_drawdown": -0.053129,
+    "IC": -0.01913861966806506,
+    "ICIR": -0.2899105983623223,
+    "Rank IC": -0.03785410091836211,
+    "Rank ICIR": -0.41243059069322824
+  },
+  "ddg_da": {
+    "status": "blocked",
+    "reason": "PyTorch not available for current environment",
+    "details": "Current venv is Python 3.14.4 on macOS x86_64. pip could not find a matching torch distribution for this interpreter/platform combination."
+  }
+}

@@ -49,12 +49,24 @@ SAFE_PICKLE_CLASSES: Set[Tuple[str, str]] = {
     ("qlib.data.dataset.handler", "DataHandler"),
     ("qlib.data.dataset.handler", "DataHandlerLP"),
     ("qlib.data.dataset.loader", "StaticDataLoader"),
+    ("qlib.data.dataset.loader", "QlibDataLoader"),
+    ("qlib.contrib.data.handler", "Alpha158"),
+    ("qlib.contrib.data.handler", "Alpha360"),
+    ("qlib.data.dataset.processor", "RobustZScoreNorm"),
+    ("qlib.data.dataset.processor", "Fillna"),
+    ("qlib.data.dataset.processor", "DropnaLabel"),
+    ("qlib.data.dataset.processor", "CSRankNorm"),
+    ("qlib.data.dataset.processor", "CSZScoreNorm"),
+    ("qlib.data.dataset.processor", "ProcessInf"),
+    ("qlib.data.dataset.processor", "MinMaxNorm"),
+    ("qlib.data.dataset.processor", "ZScoreNorm"),
 }
 
 
 TRUSTED_MODULE_PREFIXES = (
     "pandas",
     "numpy",
+    "qlib.utils.data",
 )
 
 
