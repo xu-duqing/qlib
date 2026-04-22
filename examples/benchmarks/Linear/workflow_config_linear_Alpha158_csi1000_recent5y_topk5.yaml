@@ -47,6 +47,7 @@ task:
         module_path: qlib.contrib.model.linear
         kwargs:
             estimator: ridge
+            alpha: 0.05
     dataset:
         class: DatasetH
         module_path: qlib.data.dataset

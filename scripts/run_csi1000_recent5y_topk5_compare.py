@@ -29,6 +29,7 @@ ENV.update(
 
 RUNS = {
     "linear": "examples/benchmarks/Linear/workflow_config_linear_Alpha158_csi1000_recent5y_topk5.yaml",
+    "rr": "examples/benchmarks/Linear/workflow_config_linear_Alpha158_csi1000_recent5y_topk5.yaml",
     "lightgbm": "examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158_csi1000_recent5y_topk5.yaml",
 }
 
