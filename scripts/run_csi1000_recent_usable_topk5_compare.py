@@ -98,6 +98,7 @@ lines = [
     "| Model | Window | Exit | IC | ICIR | Rank IC | Rank ICIR | annualized_return(cost) | information_ratio(cost) | max_drawdown(cost) | Log |",
     "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|",
 ]
+report_rows = []
 for item in results:
     m = item["metrics"]
     window = "recent2y" if "recent2y" in item["name"] else "recent3y"
@@ -105,6 +106,23 @@ for item in results:
     lines.append(
         f"| {model} | {window} | {item['exit_code']} | {m['IC']} | {m['ICIR']} | {m['Rank IC']} | {m['Rank ICIR']} | {m['annualized_return']} | {m['information_ratio']} | {m['max_drawdown']} | `{item['log']}` |"
     )
+    report_rows.append(
+        f"| {RUN_ID} | csi1000_{window} | {model} | {m['IC']} | {m['ICIR']} | {m['Rank IC']} | {m['Rank ICIR']} | {m['annualized_return']} | {m['information_ratio']} | {m['max_drawdown']} | `{item['log']}` |"
+    )
 
 (RUN_DIR / "summary.md").write_text("\n".join(lines) + "\n")
+
+report_path = ROOT / "BENCHMARK_REPORT.md"
+report_header = "# Qlib Benchmark Report\n\n后续运行结果统一记录在这里。\n\n| 运行标识 | 股票池 | 模型 | IC | ICIR | Rank IC | Rank ICIR | 带成本年化超额 | 带成本信息比率 | 带成本最大回撤 | 日志 |\n|---|---|---|---:|---:|---:|---:|---:|---:|---:|---|\n"
+if report_path.exists():
+    report_text = report_path.read_text(encoding="utf-8")
+    if not report_text.endswith("\n"):
+        report_text += "\n"
+else:
+    report_text = report_header
+for row in report_rows:
+    if row not in report_text:
+        report_text += row + "\n"
+report_path.write_text(report_text, encoding="utf-8")
+
 print(str(RUN_DIR))
