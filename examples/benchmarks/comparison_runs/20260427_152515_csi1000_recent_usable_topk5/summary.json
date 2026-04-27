@@ -1,0 +1,66 @@
+{
+  "run_id": "20260427_152515_csi1000_recent_usable_topk5",
+  "generated_at": "2026-04-27T15:36:11",
+  "results": [
+    {
+      "name": "linear_recent2y",
+      "config": "examples/benchmarks/Linear/workflow_config_linear_Alpha158_csi1000_recent2y_topk5.yaml",
+      "exit_code": 0,
+      "log": "examples/benchmarks/comparison_runs/20260427_152515_csi1000_recent_usable_topk5/linear_recent2y_stdout.log",
+      "metrics": {
+        "IC": "-0.0002082031847114145",
+        "ICIR": "-0.0013582015765295562",
+        "Rank IC": "0.039427583246114756",
+        "Rank ICIR": "0.22169908516176762",
+        "annualized_return": "-0.374312",
+        "information_ratio": "-1.672011",
+        "max_drawdown": "-0.105397"
+      }
+    },
+    {
+      "name": "lightgbm_recent2y",
+      "config": "examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158_csi1000_recent2y_topk5.yaml",
+      "exit_code": 0,
+      "log": "examples/benchmarks/comparison_runs/20260427_152515_csi1000_recent_usable_topk5/lightgbm_recent2y_stdout.log",
+      "metrics": {
+        "IC": "0.006716974791382605",
+        "ICIR": "0.06012170848377766",
+        "Rank IC": "0.028901850549687743",
+        "Rank ICIR": "0.24403944005969347",
+        "annualized_return": "-0.636658",
+        "information_ratio": "-2.821270",
+        "max_drawdown": "-0.253364"
+      }
+    },
+    {
+      "name": "linear_recent3y",
+      "config": "examples/benchmarks/Linear/workflow_config_linear_Alpha158_csi1000_recent3y_topk5.yaml",
+      "exit_code": 0,
+      "log": "examples/benchmarks/comparison_runs/20260427_152515_csi1000_recent_usable_topk5/linear_recent3y_stdout.log",
+      "metrics": {
+        "IC": "0.0004800064049762163",
+        "ICIR": "0.00290014898731162",
+        "Rank IC": "0.047635822631639055",
+        "Rank ICIR": "0.26091990677646937",
+        "annualized_return": "-0.453494",
+        "information_ratio": "-1.944058",
+        "max_drawdown": "-0.108688"
+      }
+    },
+    {
+      "name": "lightgbm_recent3y",
+      "config": "examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158_csi1000_recent3y_topk5.yaml",
+      "exit_code": 0,
+      "log": "examples/benchmarks/comparison_runs/20260427_152515_csi1000_recent_usable_topk5/lightgbm_recent3y_stdout.log",
+      "metrics": {
+        "IC": "0.00887121257192031",
+        "ICIR": "0.07299444503080597",
+        "Rank IC": "0.02726964934798768",
+        "Rank ICIR": "0.19962259137033392",
+        "annualized_return": "-1.075264",
+        "information_ratio": "-4.653375",
+        "max_drawdown": "-0.308011"
+      }
+    }
+  ]
+}
